@@ -44,22 +44,6 @@ jobs:
           npm run merge:reports || true
           npm run generate:report || true
       
-      - name: Upload Cypress screenshots
-        uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: cypress-screenshots-${{ matrix.browser }}
-          path: cypress/screenshots
-          retention-days: 7
-      
-      - name: Upload Cypress videos
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: cypress-videos-${{ matrix.browser }}
-          path: cypress/videos
-          retention-days: 7
-      
       - name: Upload test reports
         uses: actions/upload-artifact@v4
         if: always()
@@ -67,10 +51,3 @@ jobs:
           name: test-reports-${{ matrix.browser }}
           path: cypress/reports
           retention-days: 30
-      
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: cypress/reports/**/*.xml
-          check_name: Cypress Test Results (${{ matrix.browser }})
