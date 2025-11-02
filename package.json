@@ -21,8 +21,8 @@
     "testing",
     "e2e"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Goku - João Vitor dos Santos <@QAkarotto>",
+  "license": "MIT",
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
     "cypress": "^13.16.0",
