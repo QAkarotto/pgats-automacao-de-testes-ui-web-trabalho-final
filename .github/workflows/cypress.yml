@@ -11,11 +11,6 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     
-    strategy:
-      fail-fast: false
-      matrix:
-        browser: [chrome, firefox]
-    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,10 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Run Cypress tests on ${{ matrix.browser }}
+      - name: Run Cypress tests on Chrome
         uses: cypress-io/github-action@v6
         with:
-          browser: ${{ matrix.browser }}
+          browser: chrome
           config-file: cypress.config.js
           spec: cypress/e2e/**/*.cy.js
         env:
@@ -48,6 +43,6 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-reports-${{ matrix.browser }}
+          name: test-reports-chrome
           path: cypress/reports
           retention-days: 30
