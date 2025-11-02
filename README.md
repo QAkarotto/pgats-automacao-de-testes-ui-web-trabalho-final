@@ -417,11 +417,14 @@ describe('Test Case: Description', () => {
 
 ## 📄 Licença
 
-Este projeto é open source e está disponível sob a licença ISC.
+Este projeto é open source e está disponível sob a [licença MIT](LICENSE).
 
 ## 👥 Autor
 
-Desenvolvido como trabalho final da Pós-Graduação em Automação de Testes - PGATS
+**Goku - João Vitor dos Santos**
+
+- GitHub: [@QAkarotto](https://github.com/QAkarotto)
+- Projeto desenvolvido como trabalho final da Pós-Graduação em Automação de Testes - PGATS
 
 ## 📞 Contato
 
