@@ -1,0 +1,2 @@
+This is a test file for upload functionality in Contact Us form.
+Testing file upload with Cypress automation.
